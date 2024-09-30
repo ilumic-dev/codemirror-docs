@@ -4,10 +4,14 @@ import {
   CiChatConversation,
   CiEditPencilLine01,
   CiGithub,
+  CiMenuAlt01,
+  CiMobile,
+  CiMonitor,
+  CiSyntaxHighlighting,
 } from "../components/icons";
 import { startCodemirror } from "../components/codemirror/main";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const meta = () => {
   return [
@@ -20,6 +24,70 @@ export default function Index() {
   let text = "The most-extensible code editor for the web.";
   useEffect(() => {
     startCodemirror();
+  }, []);
+  const featuresGrid = [
+    <div className="grid-element" key="1">
+      <div className="grid-title">
+        <CiMonitor /> <span>Accesibility</span>
+      </div>
+      <p>Works well with screen readers and keyboard-only users.</p>
+    </div>,
+    <div className="grid-element" key="2">
+      <div className="grid-title">
+        <CiMobile /> <span>Mobile Support</span>
+      </div>
+      <p>
+        Use the platform&apos;s native selection and editing features on phones.
+      </p>
+    </div>,
+    <div className="grid-element" key="3">
+      <div className="grid-title">
+        <CiMenuAlt01 /> <span>Bidirectional Text</span>
+      </div>
+      <p>Support mixing of right-to-left and left-to-right text.</p>
+    </div>,
+    <div className="grid-element" key="4">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Syntax Highlighting</span>
+      </div>
+      <p>Color code to reflect syntactic structure.</p>
+    </div>,
+  ];
+  const gridWidth = 300;
+  var [gridContent, setGridContent] = useState(<></>);
+  useEffect(() => {
+    var elementByColumnInGrid = Math.floor(
+      document.body.offsetWidth / gridWidth
+    );
+    var grid = [];
+    var index = 0;
+    var indexelem = 1;
+    featuresGrid.forEach((fg, ind) => {
+      indexelem++;
+      if (indexelem > elementByColumnInGrid) {
+        index++;
+        indexelem = 1;
+      }
+      if (grid[index]) {
+        grid[index].push(fg);
+      } else {
+        grid[index] = [fg];
+      }
+    });
+    console.log(elementByColumnInGrid, grid);
+    setGridContent(
+      <>
+        {grid.map((col) => {
+          return (
+            <div className="grid-row" key={col}>
+              {col.map((fg) => {
+                return fg;
+              })}
+            </div>
+          );
+        })}
+      </>
+    );
   }, []);
   return (
     <>
@@ -96,7 +164,13 @@ export default function Index() {
       </header>
       <section className="editor-section">
         <div className="editor-example ilumic-editor"></div>
-        <h1>Hola.</h1>
+        <center>
+          <span className="title-category">
+            <asterisk>*</asterisk> FEATURES <asterisk>*</asterisk>
+          </span>
+        </center>
+        <br />
+        <div className="grid">{gridContent}</div>
       </section>
 
       <svg style={{ position: "fixed" }} id="svgroundcorner">

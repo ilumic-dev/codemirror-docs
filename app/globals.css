@@ -658,7 +658,74 @@ nav {
   background-color: var(--cm-bg);
   z-index: 0;
   overflow: hidden;
-  box-shadow: 0px 0px 80px 4px var(--cm-bg);
+  box-shadow: 0px 0px 80px 4px #111;
+  border: 1px solid var(--stroke);
+}
+
+.title-category {
+  font-size: 24px;
+}
+
+.title-category {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 200, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+  width: 53%;
+}
+asterisk {
+  font-size: 32px;
+  transform: translateY(13%);
+  display: inline-block;
+  pointer-events: none;
+  user-select: none;
+  font-weight: 100;
+}
+
+.grid-element svg {
+  width: var(--size);
+  height: var(--size);
+  --size: 25px;
+}
+
+.grid-element .grid-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-element .grid-title span {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.grid-element {
+  width: 300px;
+  padding: 12px;
+  height: 200px;
+  float: left;
+  justify-content: center;
+  text-align: center;
+}
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-row {
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  --stroke: rgb(44, 44, 44) !important;
+  --border: rgb(44, 44, 44) !important;
 }
 
 h1,

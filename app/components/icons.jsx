@@ -57,6 +57,166 @@ export function CiChatConversation(props) {
     </svg>
   );
 }
+export function CiMenuAlt01(props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M12 17h7M5 12h14M5 7h14"
+      ></path>
+    </svg>
+  );
+}
+export function CiSyntaxHighlighting(props) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      version="1.1"
+      id="svg4"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <defs id="defs8" />
+      <rect
+        style={{
+          fill: "#ffffff",
+          fillOpacity: 1,
+          strokeWidth: 0.600625,
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+        }}
+        id="rect291"
+        width="6.8295069"
+        height="2"
+        x="4"
+        y="6"
+        ry="1"
+      />
+      <rect
+        style={{
+          fill: "#77c1ff",
+          fillOpacity: 1,
+          strokeWidth: 0.600625,
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+        }}
+        id="rect291-3"
+        width="10.235134"
+        height="2"
+        x="4"
+        y="11"
+        ry="1"
+      />
+      <rect
+        style={{
+          fill: "#bf77ff",
+          fillOpacity: 1,
+          strokeWidth: 0.600625,
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+        }}
+        id="rect291-3-5"
+        width="4.9004154"
+        height="2"
+        x="15.18251"
+        y="11"
+        ry="1"
+      />
+      <rect
+        style={{
+          fill: "#ff7784",
+          fillOpacity: 1,
+          strokeWidth: 0.600625,
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+        }}
+        id="rect291-3-6"
+        width="3.3318276"
+        height="2"
+        x="4.0829258"
+        y="16"
+        ry="1"
+      />
+      <rect
+        style={{
+          fill: "#77c1ff",
+          fillOpacity: 1,
+          strokeWidth: 0.600625,
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+        }}
+        id="rect291-3-6-3"
+        width="7.5043015"
+        height="2"
+        x="8.2752733"
+        y="16"
+        ry="1"
+      />
+      <rect
+        style={{
+          fill: "#ffffff",
+          fillOpacity: 1,
+          strokeWidth: 0.600625,
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+        }}
+        id="rect291-3-6-3-5"
+        width="3.4428313"
+        height="2"
+        x="16.640095"
+        y="16"
+        ry="1"
+      />
+      <rect
+        style={{
+          fill: "#bf77ff",
+          fillOpacity: 1,
+          strokeWidth: 0.600625,
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+        }}
+        id="rect291-3-7"
+        width="8"
+        height="2"
+        x="12.062559"
+        y="6"
+        ry="1"
+      />
+    </svg>
+  );
+}
+export function CiMobile(props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M7 6.2v11.6c0 1.12 0 1.68.218 2.107c.192.377.497.683.874.875c.427.218.987.218 2.105.218h3.606c1.118 0 1.677 0 2.104-.218a2 2 0 0 0 .875-.875c.218-.427.218-.986.218-2.104V6.197c0-1.118 0-1.678-.218-2.105a2 2 0 0 0-.875-.874C15.48 3 14.92 3 13.8 3h-3.6c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874C7 4.52 7 5.08 7 6.2"
+      ></path>
+    </svg>
+  );
+}
+export function CiMonitor(props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M15 20H9m-5-6.2V8.2c0-1.12 0-1.68.218-2.108c.192-.377.497-.682.874-.874C5.52 5 6.08 5 7.2 5h9.6c1.12 0 1.68 0 2.107.218c.377.192.683.497.875.874c.218.427.218.987.218 2.105v5.606c0 1.118 0 1.677-.218 2.104a2 2 0 0 1-.875.875c-.427.218-.986.218-2.104.218H7.197c-1.118 0-1.678 0-2.105-.218a2 2 0 0 1-.874-.875C4 15.48 4 14.92 4 13.8"
+      ></path>
+    </svg>
+  );
+}
 export function CiGithub(props) {
   return (
     <svg
