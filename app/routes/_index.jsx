@@ -2,11 +2,17 @@ import {
   CiBook,
   CiBulb,
   CiChatConversation,
+  CiDashboardSpeed01,
+  CiDashboardSpeed02,
   CiEditPencilLine01,
   CiGithub,
+  CiLayers,
+  CiLeftToRightListNumber,
   CiMenuAlt01,
   CiMobile,
   CiMonitor,
+  CiPuzzle,
+  CiSearchMagnifyingGlass,
   CiSyntaxHighlighting,
 } from "../components/icons";
 import { startCodemirror } from "../components/codemirror/main";
@@ -55,7 +61,7 @@ export default function Index() {
     </div>,
     <div className="grid-element" key="5">
       <div className="grid-title">
-        <CiSyntaxHighlighting /> <span>Line Numbers</span>
+        <CiLeftToRightListNumber /> <span>Line Numbers</span>
       </div>
       <p>
         Display gutters with line numbers or other information next to the code.
@@ -75,7 +81,7 @@ export default function Index() {
     </div>,
     <div className="grid-element" key="8">
       <div className="grid-title">
-        <CiSyntaxHighlighting /> <span>Search / Replace</span>
+        <CiSearchMagnifyingGlass /> <span>Search / Replace</span>
       </div>
       <p>Editor-specific search, regexp search, and replace functionality.</p>
     </div>,
@@ -87,19 +93,19 @@ export default function Index() {
     </div>,
     <div className="grid-element" key="10">
       <div className="grid-title">
-        <CiSyntaxHighlighting /> <span>Extension Interface</span>
+        <CiPuzzle /> <span>Extension Interface</span>
       </div>
       <p>Robustly implement demanding editor extensions.</p>
     </div>,
     <div className="grid-element" key="11">
       <div className="grid-title">
-        <CiSyntaxHighlighting /> <span>Modularity</span>
+        <CiLayers /> <span>Modularity</span>
       </div>
       <p>Most features are implemented on top of a generic public API.</p>
     </div>,
     <div className="grid-element" key="12">
       <div className="grid-title">
-        <CiSyntaxHighlighting /> <span>Speed</span>
+        <CiDashboardSpeed02 /> <span>Speed</span>
       </div>
       <p>Remains responsive even on huge documents and long lines.</p>
     </div>,

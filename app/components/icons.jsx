@@ -57,6 +57,112 @@ export function CiChatConversation(props) {
     </svg>
   );
 }
+export function CiSearchMagnifyingGlass(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={768}
+      height={768}
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path
+        fill="none"
+        stroke="white"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="m15 15l6 6m-11-4a7 7 0 1 1 0-14a7 7 0 0 1 0 14"
+      ></path>
+    </svg>
+  );
+}
+export function CiDashboardSpeed02(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="hugeicon"
+      width={768}
+      height={768}
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <g
+        fill="none"
+        stroke="white"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        color="white"
+      >
+        <circle cx={12} cy={18} r={3}></circle>
+        <path d="M12 15v-5m10 3c0-5.523-4.477-10-10-10S2 7.477 2 13"></path>
+      </g>
+    </svg>
+  );
+}
+export function CiLayers(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={768}
+      height={768}
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path
+        fill="none"
+        stroke="white"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="m21 12l-9 6l-9-6m18 4l-9 6l-9-6m18-8l-9 6l-9-6l9-6z"
+      ></path>
+    </svg>
+  );
+}
+export function CiPuzzle(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={768}
+      height={768}
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path
+        fill="none"
+        stroke="white"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M20 7h-2.151C17.35 7 17 6.498 17 6a3 3 0 1 0-6 0c0 .498-.351 1-.849 1H8a1 1 0 0 0-1 1v2.151C7 10.65 6.498 11 6 11a3 3 0 1 0 0 6c.498 0 1 .351 1 .849V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.151c0-.498-.503-.849-1-.849a3 3 0 1 1 0-6c.497 0 1-.351 1-.849V8a1 1 0 0 0-1-1"
+      ></path>
+    </svg>
+  );
+}
+export function CiLeftToRightListNumber(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="hugeicon"
+      width={768}
+      height={768}
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path
+        fill="none"
+        stroke="white"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        d="M11 6h10m-10 6h10m-10 6h10M3 15h1.5c.279 0 .418 0 .534.023a1.2 1.2 0 0 1 .943.943C6 16.082 6 16.22 6 16.5s0 .418-.023.534a1.2 1.2 0 0 1-.943.943C4.918 18 4.78 18 4.5 18s-.418 0-.534.023a1.2 1.2 0 0 0-.943.943C3 19.082 3 19.22 3 19.5v.9c0 .283 0 .424.088.512s.23.088.512.088H6M3 3h1.2a.3.3 0 0 1 .3.3V9m0 0H3m1.5 0H6"
+        color="white"
+      ></path>
+    </svg>
+  );
+}
 export function CiMenuAlt01(props) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
