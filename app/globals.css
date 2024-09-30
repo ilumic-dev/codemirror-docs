@@ -705,10 +705,28 @@ asterisk {
   font-size: 24px;
 }
 
+@keyframes phase {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+header h1 cursor {
+  animation-name: phase;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
 .grid-element {
-  width: 300px;
+  width: 295px;
   padding: 12px;
-  height: 200px;
   float: left;
   justify-content: center;
   text-align: center;

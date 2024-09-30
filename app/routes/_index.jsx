@@ -10,6 +10,7 @@ import {
   CiSyntaxHighlighting,
 } from "../components/icons";
 import { startCodemirror } from "../components/codemirror/main";
+import ReactDOMServer from "react-dom/server";
 
 import { useEffect, useState } from "react";
 
@@ -52,17 +53,121 @@ export default function Index() {
       </div>
       <p>Color code to reflect syntactic structure.</p>
     </div>,
+    <div className="grid-element" key="5">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Line Numbers</span>
+      </div>
+      <p>
+        Display gutters with line numbers or other information next to the code.
+      </p>
+    </div>,
+    <div className="grid-element" key="6">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Autocompletion</span>
+      </div>
+      <p>Provide language-specific completion hints in the editor.</p>
+    </div>,
+    <div className="grid-element" key="7">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Code Folding</span>
+      </div>
+      <p>Temporarily hide parts of the document.</p>
+    </div>,
+    <div className="grid-element" key="8">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Search / Replace</span>
+      </div>
+      <p>Editor-specific search, regexp search, and replace functionality.</p>
+    </div>,
+    <div className="grid-element" key="9">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Full Parsing</span>
+      </div>
+      <p>Detailed parse trees allow many types of language integration.</p>
+    </div>,
+    <div className="grid-element" key="10">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Extension Interface</span>
+      </div>
+      <p>Robustly implement demanding editor extensions.</p>
+    </div>,
+    <div className="grid-element" key="11">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Modularity</span>
+      </div>
+      <p>Most features are implemented on top of a generic public API.</p>
+    </div>,
+    <div className="grid-element" key="12">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Speed</span>
+      </div>
+      <p>Remains responsive even on huge documents and long lines.</p>
+    </div>,
+    <div className="grid-element" key="13">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Bracket Closing</span>
+      </div>
+      <p>Automatically insert matching brackets during typing.</p>
+    </div>,
+    <div className="grid-element" key="14">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Linting</span>
+      </div>
+      <p>Show error and warning messages in the editor.</p>
+    </div>,
+    <div className="grid-element" key="15">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Flexible Styling</span>
+      </div>
+      <p>Mix font styles and sizes, add widgets in the content.</p>
+    </div>,
+    <div className="grid-element" key="16">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Theming</span>
+      </div>
+      <p>Import or create custom visual editor styles.</p>
+    </div>,
+    <div className="grid-element" key="17">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Collaborative Editing</span>
+      </div>
+      <p>Allow multiple users to edit the same document.</p>
+    </div>,
+    <div className="grid-element" key="18">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Undo History</span>
+      </div>
+      <p>Undo and redo functionality with collab editing support.</p>
+    </div>,
+    <div className="grid-element" key="19">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Multiple Selections</span>
+      </div>
+      <p>Select and edit multiple ranges of the document at once.</p>
+    </div>,
+    <div className="grid-element" key="20">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>Internationalization</span>
+      </div>
+      <p>Provide custom text to display or announce to the user.</p>
+    </div>,
+    <div className="grid-element" key="21"></div>,
+    <div className="grid-element" key="22">
+      <div className="grid-title">
+        <CiSyntaxHighlighting /> <span>...and more</span>
+      </div>
+      <p>Find a full description of the library&apos;s features in the docs.</p>
+    </div>,
   ];
   const gridWidth = 300;
   var [gridContent, setGridContent] = useState(<></>);
   useEffect(() => {
-    var elementByColumnInGrid = Math.floor(
-      document.body.offsetWidth / gridWidth
-    );
+    var elementByColumnInGrid =
+      Math.floor(Math.floor(document.body.offsetWidth / gridWidth) / 2) * 2;
     var grid = [];
     var index = 0;
     var indexelem = 1;
-    featuresGrid.forEach((fg, ind) => {
+    featuresGrid.forEach((fg) => {
       indexelem++;
       if (indexelem > elementByColumnInGrid) {
         index++;
@@ -79,11 +184,24 @@ export default function Index() {
       <>
         {grid.map((col) => {
           return (
-            <div className="grid-row" key={col}>
-              {col.map((fg) => {
-                return fg;
-              })}
-            </div>
+            <>
+              <div className="grid-row" key={col}>
+                {col.map((fg) => {
+                  return (
+                    <>
+                      {fg}
+                      {ReactDOMServer.renderToString(fg).includes(
+                        "Mobile Support"
+                      ) ? (
+                        <div className="grid-row"></div>
+                      ) : (
+                        <></>
+                      )}
+                    </>
+                  );
+                })}
+              </div>
+            </>
           );
         })}
       </>
@@ -130,18 +248,8 @@ export default function Index() {
                   "<cursor>|</cursor>",
                   ""
                 );
-                if (parseInt(elem.getAttribute("index")) >= text.length - 1) {
+                if (parseInt(elem.getAttribute("index")) >= text.length - 2) {
                   clearInterval(a);
-                  setInterval(() => {
-                    elem.querySelector("cursor").style.display =
-                      elem.querySelector("cursor").style.display === "none"
-                        ? "inline"
-                        : "none";
-                  }, 500);
-                  elem.innerHTML = elem.innerHTML.replace(
-                    "<cursor>|</cursor>",
-                    ""
-                  );
                 }
                 elem.style.opacity = 1;
                 if (text[parseInt(elem.getAttribute("index"))] === "") {
