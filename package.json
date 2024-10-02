@@ -44,7 +44,9 @@
     "@uiw/codemirror-extensions-color": "4.23.3",
     "@uiw/codemirror-extensions-hyper-link": "4.23.3",
     "codemirror-extension-inline-suggestion": "0.0.3",
+    "highlight.js": "^11.10.0",
     "isbot": "^4.1.0",
+    "marked": "^14.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

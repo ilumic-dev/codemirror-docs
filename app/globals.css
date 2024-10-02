@@ -46,6 +46,54 @@ nav .nav-element {
   cursor: pointer;
   user-select: none;
 }
+section.blank p:nth-of-type(1) {
+  font-size: 24px;
+}
+section.blank hr {
+  margin: 60px 0px;
+  border: none;
+  height: 1px;
+  width: 100%;
+  background-color: #e7e7e725;
+}
+section.blank code {
+  background-color: #e7e7e711;
+  margin: 2px;
+  font-family: JetBrains Mono;
+  display: inline-block;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-weight: 500;
+  padding: 0.15rem 0.3rem;
+}
+
+section.blank pre > code {
+  padding: calc(0.15rem * var(--factor-multiplication)) calc(0.3rem * var(--factor-multiplication));
+  border-radius: calc(0.25rem * var(--factor-multiplication));
+  --factor-multiplication: 3;
+  
+}
+section.blank h2 {
+  font-size: 42px;
+}
+section.blank h1 {
+  font-size: 62px;
+  font-weight: 900;
+}
+section.blank {
+  background-color: transparent;
+}
+nav .nav-element.selected {
+  font-weight: 900;
+}
+
+nav .nav-element.selected svg * {
+  stroke-width: 3;
+}
+nav .nav-element.selected::after,
+nav .nav-element.selected:hover::after {
+  width: 0% !important;
+}
 
 header h1 cursor {
   text-shadow: 0px 0px 20px #ffffff2f;
